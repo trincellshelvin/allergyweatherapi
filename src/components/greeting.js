@@ -1,6 +1,6 @@
 // components/Greeting.js
 const Greeting = () => {
-    return <h1>Hello, welcome to our site!</h1>;
+    return <h1>Hello! Welcome to Allergy Weather Preparedness!</h1>;
 };
 
 export default Greeting;

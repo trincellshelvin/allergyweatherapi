@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import Header from '../components/Header'; // Import the Header component
 import Greeting from '../components/greeting';
 import HeroImage from '../components/HeroImage';
 import PreparednessResources from '../components/PreparednessResources';
@@ -11,46 +12,25 @@ export default function Splash() {
   };
 
   return (
-    <div className="splash-container">
-      <Greeting />
-      <HeroImage />
-      <p>Your go-to source for weather and allergy information.</p>
-      <button onClick={handleButtonClick} className="splash-button">
-        Get Started
-      </button>
-      <PreparednessResources />
+    <div className="splash-container flex flex-col items-center bg-violet-500 text-center p-5" style={{ minHeight: '100vh' }}>
+      <Header /> {/* Add the Header component */}
+      <div className="w-full max-w-2xl mt-10" style={{ marginTop: '5%' }}> {/* Add 5% margin-top */}
+        <Greeting />
+        <HeroImage />
+        <p>Your go-to source for weather and allergy information.</p>
+        <button
+          onClick={handleButtonClick}
+          className="splash-button px-4 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-700 mb-8">
+          Get Started
+        </button>
+        <div className="p-4 bg-white rounded shadow-md">
+          <PreparednessResources />
+        </div>
+      </div>
 
-      {/* Add some basic styling */}
       <style jsx>{`
         .splash-container {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          height: 100vh;
-          background-color: #f0f8ff;
-          text-align: center;
-          padding: 20px;
-        }
-
-        .hero-image-container {
-          width: 100%;
-          max-width: 800px;
-          margin-bottom: 20px;
-        }
-
-        .splash-button {
-          padding: 10px 20px;
-          font-size: 1rem;
-          color: #fff;
-          background-color: #0070f3;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-        }
-
-        .splash-button:hover {
-          background-color: #005bb5;
+          opacity: 0.5; /* Set opacity to 50% */
         }
       `}</style>
     </div>

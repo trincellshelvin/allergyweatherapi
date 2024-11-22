@@ -1,4 +1,30 @@
+## Day 1 Log
+
+### Tasks Completed
+
+- Initialized the Next.js project with `create-next-app`.
+- Set up Firebase integration for authentication.
+- Began drafting wireframes for the login page and product listing page.
+
+### Challenges and Solutions
+
+- Issues with how to setup wireframe and down scale original project to implement a seamless app between the original application site to the launched app.
+
+### Learnings and Insights
+
+- Learned about the benefits of using Next.js for server-side rendering and its impact on SEO.
+- Gained a better understanding of Firebase's authentication flow.
+
+### Next Steps
+
+- Finalize wireframes for the product details page.
+- Start implementing the Header component.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+
+![wireframe](/public/wireframe.png)
+
+## Day 2 Log
 
 ## Getting Started
 

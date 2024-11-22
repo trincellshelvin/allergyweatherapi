@@ -13,7 +13,7 @@ export default function About() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <HeaderWithAPILink /> {/* Add HeaderWithAPILink at the top */}
-            <div className="container mx-auto mt-4 p-5 bg-white rounded-lg shadow-md">
+            <div className="container mx-auto mt-4 p-5 bg-violet-500 rounded-lg shadow-md"> {/* Changed the background color to violet */}
                 <h1 className="text-4xl font-bold mb-5">About Me</h1>
                 <div className="flex flex-col md:flex-row items-center">
                     <div className="md:w-1/3 mb-4 md:mb-0">

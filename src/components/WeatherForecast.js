@@ -50,25 +50,20 @@ const WeatherForecast = () => {
 
     return (
         <div>
-            <h1>Allergy Weather Preparedness APP</h1>
             <form onSubmit={handleSubmit}>
-                <label>
-                    Postal Code:
-                    <input
-                        type="text"
-                        value={postalCode}
-                        onChange={(e) => setPostalCode(e.target.value)}
-                    />
-                </label>
+                <input
+                    type="text"
+                    value={postalCode}
+                    onChange={(e) => setPostalCode(e.target.value)}
+                    placeholder="Postal Code"
+                />
                 <br />
-                <label>
-                    Country:
-                    <input
-                        type="text"
-                        value={country}
-                        onChange={(e) => setCountry(e.target.value)}
-                    />
-                </label>
+                <input
+                    type="text"
+                    value={country}
+                    onChange={(e) => setCountry(e.target.value)}
+                    placeholder="Country"
+                />
                 <br />
                 <button type="submit">Get Weather</button>
             </form>

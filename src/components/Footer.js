@@ -38,10 +38,6 @@ const Footer = () => {
                         <button type="submit" className="btn btn-primary">Subscribe</button>
                     </form>
                 </div>
-
-                <div className="thank-you-message">
-                    <p>Thank you for using our App!</p>
-                </div>
             </div>
 
             {/* Additional Styling */}

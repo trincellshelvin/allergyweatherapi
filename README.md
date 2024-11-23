@@ -49,9 +49,15 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 ### Tasks Completed
 
 - Created mailing list component which is set as a footer to send an email to user.
+- Added router to all useEffect and useState files to ensure proper movement at deployment. 
 
 ### Learnings and Insights
+
+- How to use command prompt to allow access to mail client 
+
 ### Next Steps
+
+- deploy page and possibly correct ASCII formatting on pages.
 
 ## Getting Started
 

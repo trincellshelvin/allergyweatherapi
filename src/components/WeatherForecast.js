@@ -1,8 +1,10 @@
-require('dotenv').config(); 
-
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router'; // Import useRouter if you haven't already
+
+require('dotenv').config();
 
 const WeatherForecast = () => {
+    const router = useRouter(); // Initialize router if it's used
     const [postalCode, setPostalCode] = useState('');
     const [country, setCountry] = useState('');
     const [weatherData, setWeatherData] = useState(null);
@@ -19,7 +21,7 @@ const WeatherForecast = () => {
             setCountry(savedCountry);
             fetchWeatherData(savedPostalCode, savedCountry);
         }
-    }, []);
+    }, [router]); // Add router as a dependency if used inside the effect
 
     const fetchWeatherData = async (postalCode, country) => {
         setLoading(true);

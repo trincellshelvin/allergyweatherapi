@@ -1,6 +1,6 @@
 ## Visit the Allergy Weather App 
 
-You can visit the app here [AllergyWeatherApp](allergyweatherapi-nmwc-cxfm0a3cc-trincellshelvins-projects.vercel.app)
+You can visit the app here [AllergyWeatherApp](https://allergyweatherapi-nmwc.vercel.app/)
 
 ## Day 1 Log
 

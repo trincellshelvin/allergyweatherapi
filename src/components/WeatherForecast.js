@@ -27,8 +27,7 @@ const WeatherForecast = () => {
         setLoading(true);
         setError(null);
 
-        const apiKey = process.env.API_KEY;
-        const url = `https://api.weatherbit.io/v2.0/current?key=${apiKey}&postal_code=${postalCode}&country=${country}`;
+        const url = `/api/weather/?postal_code=${postalCode}&country=${country}`;
 
         try {
             const response = await fetch(url);
@@ -36,7 +35,7 @@ const WeatherForecast = () => {
                 throw new Error('Failed to fetch data');
             }
             const data = await response.json();
-            setWeatherData(data.data[0]);
+            setWeatherData(data);
             // Save to local storage
             localStorage.setItem('postalCode', postalCode);
             localStorage.setItem('country', country);

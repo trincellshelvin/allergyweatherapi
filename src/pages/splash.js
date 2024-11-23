@@ -9,7 +9,7 @@ export default function Splash() {
   const router = useRouter();
 
   const handleButtonClick = () => {
-    router.push('/api-page'); // Adjust the path if your API page is named differently
+    router.push('/api-page'); 
   };
 
   return (
@@ -18,7 +18,7 @@ export default function Splash() {
       <div className="w-full max-w-2xl mt-10" style={{ marginTop: '5%' }}> {/* Add 5% margin-top */}
         <Greeting />
         <HeroImage />
-        <p>Your go&#45;to source for weather and allergy information&period;</p>
+        <p>Your go-to source for weather and allergy information.</p>
         <button
           onClick={handleButtonClick}
           className="splash-button px-4 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-700 mb-8">

@@ -2,7 +2,6 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import HeaderWithAPILink from "../components/HeaderWithAPILink"; // Ensure the correct import path
-import Footer from '../components/Footer';
 
 export default function About() {
     return (
@@ -54,7 +53,6 @@ export default function About() {
                     </ul>
                 </div>
             </div>
-            <Footer /> {/* Add Footer component at the bottom */}
         </>
     );
 }

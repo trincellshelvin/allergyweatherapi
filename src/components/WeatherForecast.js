@@ -1,3 +1,5 @@
+require('dotenv').config(); 
+
 import { useEffect, useState } from 'react';
 
 const WeatherForecast = () => {
@@ -23,7 +25,7 @@ const WeatherForecast = () => {
         setLoading(true);
         setError(null);
 
-        const apiKey = '952e27abaa244647bf48d771ba629886';
+        const apiKey = process.env.API_KEY;
         const url = `https://api.weatherbit.io/v2.0/current?key=${apiKey}&postal_code=${postalCode}&country=${country}`;
 
         try {

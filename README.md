@@ -1,3 +1,7 @@
+## Visit the Allergy Weather App 
+
+You can visit the app here [AllergyWeatherApp](allergyweatherapi-nmwc-cxfm0a3cc-trincellshelvins-projects.vercel.app)
+
 ## Day 1 Log
 
 ### Tasks Completed
@@ -25,6 +29,29 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 ![wireframe](/public/wireframe.png)
 
 ## Day 2 Log
+### Tasks Completed
+
+- Completed setup of components and what their purposes would be for. 
+- Created each component for its specific functionality. 
+- Added image files to project.
+
+### Learnings and Insights
+
+- Watch for how you write the components and any wording that requires you to use [ASCIIFORMATTING](https://www.ascii-code.com/) in order to avoid issues with deployment via vercel 
+
+### Next Steps
+
+- Fix issues with ASCII in project for vercel deployment
+- Add .env file to project for api key
+- Create function that returns the api data to the component
+
+## Day 2 Log
+### Tasks Completed
+
+- Created mailing list component which is set as a footer to send an email to user.
+
+### Learnings and Insights
+### Next Steps
 
 ## Getting Started
 

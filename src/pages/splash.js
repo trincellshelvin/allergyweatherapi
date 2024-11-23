@@ -3,6 +3,7 @@ import Header from '../components/Header'; // Import the Header component
 import Greeting from '../components/greeting';
 import HeroImage from '../components/HeroImage';
 import PreparednessResources from '../components/PreparednessResources';
+import Footer from '../components/Footer'; // Import the Footer component
 
 export default function Splash() {
   const router = useRouter();
@@ -27,6 +28,8 @@ export default function Splash() {
           <PreparednessResources />
         </div>
       </div>
+      
+      <Footer /> {/* Add the Footer component here */}
 
       <style jsx>{`
         .splash-container {

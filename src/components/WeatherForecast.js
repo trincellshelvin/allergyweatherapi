@@ -1,7 +1,7 @@
+require('dotenv').config(); // Load environment variables
+
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router'; // Import useRouter if you haven't already
-
-require('dotenv').config();
 
 const WeatherForecast = () => {
     const router = useRouter(); // Initialize router if it's used

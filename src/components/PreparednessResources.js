@@ -4,15 +4,21 @@ const PreparednessResources = () => {
     return (
         <div className="container" style={{ width: 'fit-content' }}>
             <div className="resource-buttons">
-                <button type="button" className="btn btn-outline-primary">
-                    <a href="https://www.healthline.com/health/home-remedies-for-allergies">Natural Health Resources - Healthline</a>
-                </button>
-                <button type="button" className="btn btn-outline-primary">
-                    <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8532887/">An Introduction to Rhinitis - NIH National Library of Medicine</a>
-                </button>
-                <button type="button" className="btn btn-outline-primary">
-                    <a href="https://www.medicinenet.com/best_home_remedies_for_upper_respiratory_infection/article.htm">Examples of Home Remedies</a>
-                </button>
+                <Link href="https://www.healthline.com/health/home-remedies-for-allergies" passHref>
+                    <button type="button" className="btn btn-outline-primary">
+                        Natural Health Resources - Healthline
+                    </button>
+                </Link>
+                <Link href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8532887/" passHref>
+                    <button type="button" className="btn btn-outline-primary">
+                        An Introduction to Rhinitis - NIH National Library of Medicine
+                    </button>
+                </Link>
+                <Link href="https://www.medicinenet.com/best_home_remedies_for_upper_respiratory_infection/article.htm" passHref>
+                    <button type="button" className="btn btn-outline-primary">
+                        Examples of Home Remedies
+                    </button>
+                </Link>
             </div>
 
             <main className="container">
@@ -72,25 +78,20 @@ const PreparednessResources = () => {
 
             {/* Additional Styling */}
             <style jsx>{`
-        .resource-buttons {
-        margin-bottom: 20px;
-        }
+                .resource-buttons {
+                    margin-bottom: 20px;
+                }
 
-        .resource-buttons button {
-        display: block;
-        width: 100%;
-        margin-bottom: 10px;
-        }
+                .resource-buttons button {
+                    display: block;
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
 
-        .resource-buttons a {
-        text-decoration: none;
-        color: inherit;
-        }
-
-        .text-left {
-        text-align: left;
-        }
-    `}</style>
+                .text-left {
+                    text-align: left;
+                }
+            `}</style>
         </div>
     );
 };

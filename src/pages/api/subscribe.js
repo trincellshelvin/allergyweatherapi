@@ -1,30 +1,25 @@
-import Redis from 'ioredis';
-import nodemailer from 'nodemailer';
+import { Redis } from "@upstash/redis"
+import { Resend } from 'resend';
 
-const redis = new Redis(process.env.REDIS_URL);
+const resend = new Resend(process.env.RESEND_KEY);
+
+const redis = Redis.fromEnv();
 
 export default async function handler(req, res) {
     if (req.method === 'POST') {
         const { email } = req.body;
 
-        try {
-            // Save email to Redis
-            await redis.add('subscribers', email);
 
-            // Send confirmation email
-            const transporter = nodemailer.createTransport({
-                service: 'gmail',
-                auth: {
-                    user: process.env.EMAIL_USER,
-                    pass: process.env.EMAIL_PASS,
-                },
-            });
+        // Save email to Redis
+        await redis.rpush('subscribers', email);
+        const s = await redis.lrange("subscribers", 0, -1);
+        console.log(s);
 
-            const mailOptions = {
-                from: process.env.EMAIL_USER,
-                to: email,
-                subject: 'Thank you for signing up!',
-                text: `
+        const mailOptions = {
+            from: process.env.EMAIL_USER,
+            to: email,
+            subject: 'Thank you for signing up!',
+            text: `
                     Thank you for signing up for our mailing list!
 
                     Preparedness Resources:
@@ -46,14 +41,17 @@ export default async function handler(req, res) {
                     
                     Thank you for using our App!
                 `,
-            };
+        };
 
-            await transporter.sendMail(mailOptions);
+        resend.emails.send({
+            from: 'onboarding@resend.dev',
+            to: 'trincellshelvin@gmail.com',
+            subject: 'Hello World',
+            html: '<p>Congrats on sending your <strong>first email</strong>!</p>'
+        });
 
-            res.status(200).json({ message: 'Subscription successful' });
-        } catch (error) {
-            res.status(500).json({ message: 'Internal Server Error', error: error.message });
-        }
+        res.status(200).json({ message: 'Subscription successful' });
+
     } else {
         res.status(405).json({ message: 'Method not allowed' });
     }
